@@ -1,9 +1,9 @@
 # Blockchain 
-Code targeted on blockchain implementation in JavaScript
-Consensus: PoW with longest chain
+Code targeted on blockchain implementation in JavaScript <br/>
+Consensus: PoW with longest chain <br/>
 Nodes: 10
 
-### Functions
+## Functions
 1. View Existing Blockchain http://localhost:3001/blockchain
 2. Create Transaction broadcast http://localhost:3001/transaction/broadcast
 3. Create Multiple Transactions broadcast http://localhost:3001/multiple-txn
