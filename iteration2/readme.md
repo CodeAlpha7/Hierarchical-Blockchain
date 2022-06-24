@@ -14,4 +14,4 @@
 #### Note: 
 - Request-Promise library has been deprecated. Be wary with changes.
 - Much of the code in this release has been commented out due to configuration errors. Code as it is works flawlessly. However, normal functionality is NOT guaranteed if commented code is let out its cage. 
-- Also contains draft code for bridgeNode which is the implementation of cross-chain API representing the global blockchain. The code has not been completed and needed further work.
+- Also contains draft code for bridgeNode which is the implementation of cross-chain API representing the global blockchain. The code has not been completed and needs further work.
