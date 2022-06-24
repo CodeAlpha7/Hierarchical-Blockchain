@@ -14,5 +14,5 @@ Nodes: 10
 
 
 ### Note:
-Remember to set TRANSACTION_THRESHOLD in both files <br/>
-Change node count by opening the API on different ports. Check package.json to define additional nodes. Remember to declare these in the network during register-and-broadcast-node
+- Remember to set TRANSACTION_THRESHOLD in both files <br/>
+- Change node count by opening the API on different ports. Check package.json to define additional nodes. Remember to declare these in the network during register-and-broadcast-node
