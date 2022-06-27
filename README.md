@@ -1,8 +1,21 @@
 # Blockchain 
 Code targeted on blockchain implementation in JavaScript <br/>
-Consensus: PoW with longest chain <br/>
-Hash: SHA256 <br/>
-Nodes: 10
+<b>Consensus:</b> PoW with longest chain <br/>
+<b>Hash:</b> SHA256 <br/>
+<b> Nodes: </b> Variable <br/>
+<b>Block Size: </b> Variable (Default: 5)
+
+## Pre-requisites:
+1. Nodejs (Used: v16.15.1)
+2. NPM (Used: v8.11.0)
+3. POSTMAN to interact with API (2022 June)
+4. Required modules/libraries
+    - Express (Used: v4.18.1)
+    - Nodemon (Used: v1.19.4)
+    - Body-parser (Used: v1.20.0)
+    - Request-promise (Used: v4.2.6)(Deprecated)
+    - SHA256 (Used: v0.2.0)
+    - UUID (Used: v3.4.0)
 
 ## Functions
 1. View Existing Blockchain http://localhost:3001/blockchain
