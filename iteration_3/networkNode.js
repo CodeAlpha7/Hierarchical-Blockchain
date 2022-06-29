@@ -168,6 +168,7 @@ app.get('/mine', function(req, res) {
 
 			});
 
+
 							
 				// to represent a connected blockchain divide {single BC with 10 nodes} into
 				// {2 BCs with 5 nodes each} plus a bridgeNode in between
@@ -192,30 +193,32 @@ app.get('/mine', function(req, res) {
 			};
 
 			requestPromises.push(rp(bridgeNodeOptions));
-		
-
 		}
+
+
 		else {
+			
 			const lastBlock = bitcoin.getLastBlock();
-			const lastBlock2 = bridgeNode.getLastBlock();
+			const prevBlock = bridgeNode.getLastBlock();
 			const previousBlockHash = lastBlock['hash'];
-			const previousBlockHash2 = lastBlock2['hash'];
+			const previousBlockHash2 = prevBlock['hash'];
 			const currentBlockData = {
 				transactions: bitcoin.pendingTransactions,
 				index: lastBlock['index'] + 1
 			};
 			const currentBlockData2 = {
 				transactions: bitcoin.pendingTransactions,
-				index: lastBlock2['index'] + 1
+				index: prevBlock['index'] + 1
 			};
 			const nonce = bitcoin.proofOfWork(previousBlockHash, currentBlockData);
 			const blockHash = bitcoin.hashBlock(previousBlockHash, currentBlockData, nonce);
 			const blockHash2 = bridgeNode.hashBlock(previousBlockHash2, currentBlockData2, nonce);
 
-			let { newBlock, extraArray } = bitcoin.createSingleBlock(nonce, previousBlockHash, blockHash);
-			const newBlock2 = bridgeNode.BridgeSingleBlock(nonce, previousBlockHash2, blockHash2, extraArray);
+			let { newBlock, returnedArray} = bitcoin.createSingleBlock(nonce, previousBlockHash, blockHash);
+			const newBlock2 = bridgeNode.BridgeSingleBlock(nonce, previousBlockHash2, blockHash2, returnedArray);
 			// const newBlock2 = bridgeNode.createNewBlock(nonce, previousBlockHash2, blockHash2);
 		
+
 
 			bitcoin.networkNodes.forEach(networkNodeUrl => {
 				const requestOptions = {
@@ -228,14 +231,14 @@ app.get('/mine', function(req, res) {
 				requestPromises.push(rp(requestOptions));
 			});
 
-			const bridgeNode = {
+			const bridgeNodeOptions = {
 				uri: 'http://localhost:3006/receive-global',
 				method: 'POST',
 				body: {newBlock: newBlock2},
 				json: true
 			};
 
-			requestPromises.push(rp(bridgeNode));
+			requestPromises.push(rp(bridgeNodeOptions));
 		
 		}
 	}

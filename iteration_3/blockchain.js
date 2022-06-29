@@ -89,11 +89,11 @@ Blockchain.prototype.createSingleBlock = function(nonce, previousBlockHash, hash
 		previousBlockHash: previousBlockHash
 	};
 
-	let extraArray = this.pendingTransactions;
+	let returnedArray = this.pendingTransactions;
 	this.pendingTransactions = [];
 	this.chain.push(newBlock);
 
-	return { newBlock, extraArray };
+	return { newBlock, returnedArray };
 };
 
 Blockchain.prototype.BridgeSingleBlock = function(nonce, previousBlockHash, hash, extraArray) {
@@ -235,14 +235,3 @@ Blockchain.prototype.getAddressData = function(address) {
 
 
 module.exports = Blockchain;
-
-
-
-
-
-
-
-
-
-
-
