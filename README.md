@@ -1,6 +1,6 @@
 # Blockchain 
 Code targeted on blockchain implementation in JavaScript <br/>
-<b>Consensus:</b> PoW with longest chain <br/>
+<b>Consensus:</b> PoW/PoS with longest chain <br/>
 <b>Hash:</b> SHA256 <br/>
 <b> Nodes: </b> Variable <br/>
 <b>Block Size: </b> Variable (Default: 5)
@@ -18,12 +18,13 @@ Code targeted on blockchain implementation in JavaScript <br/>
     - UUID (Used: v3.4.0)
 
 ## Functions
-1. View Existing Blockchain http://localhost:3001/blockchain
-2. Create Transaction broadcast http://localhost:3001/transaction/broadcast
-3. Create Multiple Transactions broadcast http://localhost:3001/multiple-txn
-4. Register and Broadcast Nodes http://localhost:3001/register-and-broadcast-node
-5. Mine blocks broadcast http://localhost:3001/mine
-6. Invoke Consensus and Blockchain Sync http://localhost:3001/consensus
+1. (GET) View Existing Blockchain http://localhost:3001/blockchain
+2. (POST) Create Transaction broadcast http://localhost:3001/transaction/broadcast
+3. (POST) Create Multiple Transactions broadcast http://localhost:3001/multiple-txn
+4. (POST) Register and Broadcast Nodes http://localhost:3001/register-and-broadcast-node
+5. (GET) Mine blocks broadcast using PoW http://localhost:3001/mine
+6. (POST) Mine blocks broadcast using PoS http://localhost:3001/mine-pos
+7. (GET) Invoke Consensus and Blockchain Sync http://localhost:3001/consensus
 
 
 ### Note:
