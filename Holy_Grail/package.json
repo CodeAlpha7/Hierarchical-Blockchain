@@ -1,0 +1,37 @@
+{
+  "name": "MITACS-testchain",
+  "version": "1.0.1",
+  "description": "Custom Blockchain for performance testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node_1": "nodemon --watch dev -e js dev/networkNode.js 3001 http://localhost:3001",
+    "node_2": "nodemon --watch dev -e js dev/networkNode.js 3002 http://localhost:3002",
+    "node_3": "nodemon --watch dev -e js dev/networkNode.js 3003 http://localhost:3003",
+    "node_4": "nodemon --watch dev -e js dev/networkNode.js 3004 http://localhost:3004",
+    "node_5": "nodemon --watch dev -e js dev/networkNode.js 3005 http://localhost:3005",
+    "node_6": "nodemon --watch dev -e js dev/networkNode.js 3006 http://localhost:3006",
+    "node_7": "nodemon --watch dev -e js dev/networkNode.js 3007 http://localhost:3007",
+    "node_8": "nodemon --watch dev -e js dev/networkNode.js 3008 http://localhost:3008",
+    "node_9": "nodemon --watch dev -e js dev/networkNode.js 3009 http://localhost:3009",
+    "node_10": "nodemon --watch dev -e js dev/networkNode.js 30010 http://localhost:30010",
+    "node_11": "nodemon --watch dev -e js dev/networkNode.js 30011 http://localhost:30011",
+    "node_12": "nodemon --watch dev -e js dev/networkNode.js 30012 http://localhost:30012",
+    "node_13": "nodemon --watch dev -e js dev/networkNode.js 30013 http://localhost:30013",
+    "node_14": "nodemon --watch dev -e js dev/networkNode.js 30014 http://localhost:30014",
+    "node_15": "nodemon --watch dev -e js dev/networkNode.js 30015 http://localhost:30015",
+    "node_16": "nodemon --watch dev -e js dev/networkNode.js 30016 http://localhost:30016",
+    "node_17": "nodemon --watch dev -e js dev/networkNode.js 30017 http://localhost:30017"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "nodemon": "^1.19.4",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.6",
+    "sha256": "^0.2.0",
+    "uuid": "^3.4.0"
+  }
+}
