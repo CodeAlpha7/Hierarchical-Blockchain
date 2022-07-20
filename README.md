@@ -24,8 +24,12 @@ Code targeted on blockchain implementation in JavaScript <br/>
 4. (POST) Register and Broadcast Nodes http://localhost:3001/register-and-broadcast-node
 5. (GET) Mine blocks broadcast using PoW http://localhost:3001/mine
 6. (POST) Mine blocks broadcast using PoS http://localhost:3001/mine-pos
-7. (GET) Invoke Consensus and Blockchain Sync http://localhost:3001/consensus
+7. (POST) Mine blocks in all LBCs using PoS http://localhost:3001/multi-mine
+8. (GET) Invoke Consensus and Blockchain Sync http://localhost:3001/consensus
+9. (GET) View Global blockchain http://localhost:3009/bridge
 
+
+This repo contains all iterations for personal convenience. The latest release and step-by-step documentation to use the code and reproduce results is available [here](https://link-url-here.org) . Please keep in mind that this code is only for simulation of the hierarchical model and performance testing, hence does not implement several features that commercial blockchains do.
 
 ### Note:
 - Remember to set TRANSACTION_THRESHOLD in both files to alter block size.<br/>
