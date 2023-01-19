@@ -18,15 +18,18 @@ Since the browser displays JSON, by default the text is not parsed and is hard t
 8. Select "Raw" and set type to "JSON"</br></br>
 9. In the space below, we will be entering JSON text to connect to other nodes. The nodes connected are broadcasted among each other, so you don't need to connect every node to every other node. This means that, if 1 and 2 are connected, then connecting 1 to 3 will automatically connect 3 to 2. Basically, we broadcast connection to all nodes. All connections are also bidirectional, meaning connecting 1 to 2 will automatically connect 2 to 1.</br></br>
 10. Enter the following JSON text below:
+
 ```
 {
     "newNodeUrl": "http://localhost:3002"
 }
 ```
+
 11. Hit "SEND" </br>
 Since we send this POST request on 3001 (node_1), we have successfully connected 3001 (node_1) and 3002 (node_2). To check, go to your browser where you typed the URL previously and refresh. You can now see `http://localhost:3002` in the network nodes section. Similarly, you can see `http://localhost:3001` when you open node_2 in the browser.
 </br></br>
 12. Repeat this by changing body necessary number of times until all 4 nodes are connected. So, now the browser for node_1 should show the following:
+
 ```
 {
 "chain": [
@@ -48,6 +51,7 @@ Since we send this POST request on 3001 (node_1), we have successfully connected
 ]
 }
 ```
+
 First LBC has been completed. Moving on to the next LBC.</br></br>
 
 13. Now, Go back to POSTMAN and change the request endpoint (to the left-side of SEND button) from `http://localhost:3001/register-and-broadcast-node` to `http://localhost:3005/register-and-broadcast-node` </br>
