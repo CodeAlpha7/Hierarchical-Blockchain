@@ -29,7 +29,7 @@ Code targeted on blockchain implementation in JavaScript <br/>
 9. (GET) View Global blockchain http://localhost:3009/bridge
 
 
-This repo contains all iterations for personal convenience. The latest release and step-by-step documentation to use the code and reproduce results is available [here](https://github.com/CodeAlpha7/blockchain/tree/main/Holy_Grail) . Please keep in mind that this code is only for simulation of the hierarchical model and performance testing, hence does not implement several features that commercial blockchains do.
+This repo contains all iterations for personal convenience. The latest release and step-by-step documentation to use the code and reproduce results is available [here](https://github.com/CodeAlpha7/Hierarchical-Blockchain/tree/main/Holy_Grail) . Please keep in mind that this code is only for simulation of the hierarchical model and performance testing, hence does not implement several features that commercial blockchains do.
 
 ### Note:
 - Remember to set TRANSACTION_THRESHOLD in both files to alter block size.<br/>
